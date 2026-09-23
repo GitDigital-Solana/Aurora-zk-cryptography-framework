@@ -91,7 +91,7 @@ Client → SDK → Proof → Daemon → Verification → Risk Engine → Attesta
 
 Component Diagram
 
-`mermaid
+```mermaid
 flowchart LR
     
     subgraph Client
@@ -123,7 +123,7 @@ flowchart LR
     K --> O
     R --> O
     O --> C
-`
+```
 
 ---
 
@@ -159,7 +159,7 @@ SDK (TS + WASM)
 
 End‑to‑End Proof Flow
 
-`mermaid
+```mermaid
 sequenceDiagram
     participant U as User / Wallet
     participant S as Aurora SDK
@@ -183,7 +183,7 @@ sequenceDiagram
     P-->>D: Success
     D-->>S: Result
     S-->>U: Final status
-`
+```
 
 ---
 
@@ -222,13 +222,13 @@ Installation & Usage
 
 SDK Installation
 
-`bash
+```bash
 npm install @aurora/sdk
-`
+```
 
 Basic Example
 
-`ts
+```ts
 import { AuroraClient } from "@aurora/sdk";
 
 const client = new AuroraClient();
@@ -243,7 +243,7 @@ const result = await client.submitProof({
 });
 
 console.log(result);
-`
+```
 
 ---
 
@@ -320,7 +320,7 @@ Aurora is maintained by the GitDigital Solana Team and the Human Stability Netwo
 
 BADGE WALL (ASCII BLOCK)
                     buymeacoffee.com/RickCreator87                
-`
+
 [ HyperSpeed ] [ Quantum‑Shield ] [ zk‑Identity ]
 [ Aurora Engine ] [ AI‑Circuitry ] [ Parallel Prover ]
 [ Compliance ] [ Multi‑Language ] [ Cross‑Chain Warp ]
@@ -330,7 +330,7 @@ BADGE WALL (ASCII BLOCK)
 
 ──────────────  Special Edition  ───────────────
 [ 2035‑Ready ] [ Quantum‑Proof ] [ Aurora‑Speed ]
-`
+
 
 ---
 
@@ -352,7 +352,7 @@ These are ready for your Badge Authority JSON registry.
 1. CORE SYSTEM BADGES
 
 HyperSpeed
-`json
+```json
 {
   "id": "aurora.zk.core.hyperspeed.v1",
   "name": "HyperSpeed Execution",
@@ -377,10 +377,10 @@ HyperSpeed
     "format": "base58"
   }
 }
-`
+```
 
 Quantum‑Shield
-`json
+```json
 {
   "id": "aurora.zk.core.quantum_shield.v1",
   "name": "Quantum‑Shield Security",
@@ -394,10 +394,10 @@ Quantum‑Shield
   "render": { "style": "quantum-cryptographic", "color": "deep-violet" },
   "qr": { "payload": "aurora.zk.core.quantum_shield.v1" }
 }
-`
+```
 
 zk‑Identity
-`json
+```json
 {
   "id": "aurora.zk.core.zk_identity.v1",
   "name": "zk‑Identity Sovereign",
@@ -408,10 +408,10 @@ zk‑Identity
   "render": { "style": "founder-metallic", "color": "silver" },
   "qr": { "payload": "aurora.zk.core.zk_identity.v1" }
 }
-`
+```
 
 Aurora Engine
-`json
+```json
 {
   "id": "aurora.zk.core.engine.v1",
   "name": "Aurora Engine",
@@ -422,10 +422,10 @@ Aurora Engine
   "render": { "style": "solana-neon", "color": "aurora-green" },
   "qr": { "payload": "aurora.zk.core.engine.v1" }
 }
-`
+```
 
 AI‑Circuitry
-`json
+```json
 {
   "id": "aurora.zk.core.ai_circuitry.v1",
   "name": "AI‑Optimized Circuitry",
@@ -436,10 +436,10 @@ AI‑Circuitry
   "render": { "style": "neural-hologram", "color": "blue-white" },
   "qr": { "payload": "aurora.zk.core.ai_circuitry.v1" }
 }
-`
+```
 
 Parallel Prover
-`json
+```json
 {
   "id": "aurora.zk.core.parallel_prover.v1",
   "name": "Parallel Prover",
@@ -450,10 +450,10 @@ Parallel Prover
   "render": { "style": "quantum-cryptographic", "color": "neon-purple" },
   "qr": { "payload": "aurora.zk.core.parallel_prover.v1" }
 }
-`
+```
 
 Compliance
-`json
+```json
 {
   "id": "aurora.zk.core.compliance.v1",
   "name": "Compliance‑Without‑Compromise",
@@ -464,10 +464,10 @@ Compliance
   "render": { "style": "founder-metallic", "color": "gold" },
   "qr": { "payload": "aurora.zk.core.compliance.v1" }
 }
-`
+```
 
 Multi‑Language
-`json
+```json
 {
   "id": "aurora.zk.core.multi_language.v1",
   "name": "Multi‑Language Fusion",
@@ -478,10 +478,10 @@ Multi‑Language
   "render": { "style": "solana-neon", "color": "rainbow" },
   "qr": { "payload": "aurora.zk.core.multi_language.v1" }
 }
-`
+```
 
 Cross‑Chain Warp
-`json
+```json
 {
   "id": "aurora.zk.core.crosschainwarp.v1",
   "name": "Cross‑Chain Warp",
@@ -492,14 +492,14 @@ Cross‑Chain Warp
   "render": { "style": "warp-field", "color": "blue-magenta" },
   "qr": { "payload": "aurora.zk.core.crosschainwarp.v1" }
 }
-`
+```
 
 ---
 
 2. ECOSYSTEM BADGES
 
 Developer
-`json
+```json
 {
   "id": "aurora.zk.ecosystem.developer.v1",
   "name": "Developer",
@@ -510,10 +510,10 @@ Developer
   "render": { "style": "flat", "color": "blue" },
   "qr": { "payload": "aurora.zk.ecosystem.developer.v1" }
 }
-`
+```
 
 Contributor
-`json
+```json
 {
   "id": "aurora.zk.ecosystem.contributor.v1",
   "name": "Contributor",
@@ -524,10 +524,10 @@ Contributor
   "render": { "style": "flat", "color": "green" },
   "qr": { "payload": "aurora.zk.ecosystem.contributor.v1" }
 }
-`
+```
 
 Governance
-`json
+```json
 {
   "id": "aurora.zk.ecosystem.governance.v1",
   "name": "Governance",
@@ -538,10 +538,10 @@ Governance
   "render": { "style": "flat", "color": "purple" },
   "qr": { "payload": "aurora.zk.ecosystem.governance.v1" }
 }
-`
+```
 
 Auditor
-`json
+```json
 {
   "id": "aurora.zk.ecosystem.auditor.v1",
   "name": "Auditor",
@@ -552,14 +552,14 @@ Auditor
   "render": { "style": "flat", "color": "orange" },
   "qr": { "payload": "aurora.zk.ecosystem.auditor.v1" }
 }
-`
+```
 
 ---
 
 3. SPECIAL EDITION BADGES
 
 2035‑Ready
-`json
+```json
 {
   "id": "aurora.zk.special.2035_ready.v1",
   "name": "2035‑Ready Architecture",
@@ -570,10 +570,10 @@ Auditor
   "render": { "style": "future-metallic", "color": "chrome" },
   "qr": { "payload": "aurora.zk.special.2035_ready.v1" }
 }
-`
+```
 
 Quantum‑Proof
-`json
+```json
 {
   "id": "aurora.zk.special.quantum_proof.v1",
   "name": "Quantum‑Proof Verified",
@@ -584,10 +584,10 @@ Quantum‑Proof
   "render": { "style": "quantum-cryptographic", "color": "violet" },
   "qr": { "payload": "aurora.zk.special.quantum_proof.v1" }
 }
-`
+```
 
 Aurora‑Speed
-`json
+```json
 {
   "id": "aurora.zk.special.aurora_speed.v1",
   "name": "Aurora‑Speed Certified",
@@ -598,7 +598,7 @@ Aurora‑Speed
   "render": { "style": "solana-neon", "color": "cyan" },
   "qr": { "payload": "aurora.zk.special.aurora_speed.v1" }
 }
-`
+```
 
 
 [![Open Collective](https://img.shields.io/opencollective/all/solana-project-funds?label=Backers%20%26%20Sponsors)](https://opencollective.com/solana-project-funds)
