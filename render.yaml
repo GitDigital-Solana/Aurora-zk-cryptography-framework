@@ -1,0 +1,32 @@
+services:
+  - type: worker
+    name: solana-kyc-compliance-sdk
+    env: docker
+    plan: starter
+    autoDeploy: true
+
+    buildCommand: |
+      # Install Solana
+      sh -c "$(curl -sSfL https://release.solana.com/v1.18.17/install)"
+      export PATH="$HOME/.local/share/solana/install/active_release/bin:$PATH"
+
+      # Install Anchor
+      cargo install --git https://github.com/coral-xyz/anchor anchor-cli --locked
+      export PATH="$HOME/.cargo/bin:$PATH"
+
+      # Verify versions
+      solana --version
+      anchor --version
+
+      # Build the Anchor workspace
+      anchor build -- --release
+
+    startCommand: |
+      echo "Build complete. No runtime process required for Solana programs."
+      sleep infinity
+
+    envVars:
+      - key: SOLANA_VERSION
+        value: "1.18.17"
+      - key: ANCHOR_VERSION
+        value: "0.29.0"
